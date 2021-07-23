@@ -109,7 +109,7 @@ classdef File < handle
         end
         
         function sref = subsref(obj, s)
-            switch s.type
+            switch s(1).type
                 case '.'
                     sref = builtin('subsref', obj, s);
                 case '()'
